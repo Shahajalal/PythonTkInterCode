@@ -1,0 +1,26 @@
+from tkinter import *
+root=Tk()
+root.geometry("300x300")
+m1=Menu(root)
+root.config(menu=m1)
+submenu=Menu(m1)
+m1.add_cascade(label="File",menu=submenu)
+submenu.add_command(label="show",command="")
+submenu.add_command(label="insert",command="")
+submenu.add_command(label="delete",command="")
+submenu.add_separator()
+submenu.add_command(label="Exit",command=root.quit)
+submenu1=Menu(m1)
+m1.add_cascade(label="edit",menu=submenu1)
+submenu1.add_command(label="the",command="")
+submenu1.add_command(label="boss",command="")
+
+#  Toolbar*********
+frame=Frame(root,bg="blue")
+insert=Button(frame,text="insert",padx=5,pady=5,command="")
+insert.pack(side=LEFT)
+add=Button(frame,text="add",padx=5,pady=5,command="")
+add.pack(side=LEFT)
+frame.pack(side=TOP)
+
+root.mainloop()
